@@ -1,4 +1,4 @@
-# parallelComputingAndDistributedSystemsAssignment
+# parallel computing and distributed systems assignment
 In this assignment I have to come up with some algorithm and create a simple single threaded implementation.
 
 I choose an algorithm that traverses the graph of all internal links of a certain website and counts the occurences of all words.
