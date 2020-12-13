@@ -1,5 +1,5 @@
 print(WebsiteScraper(WebsiteDownloadingRepository())
-    .scrapeDepthFirst(Domain("guimp.com"))
+    .scrape(Domain("guimp.com"))
     .flatMap { it.split("\\P{L}+".toRegex()) }
     .filter { it.isNotEmpty() }
     .groupBy{ it }

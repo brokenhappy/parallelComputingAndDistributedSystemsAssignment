@@ -13,7 +13,7 @@ class WebsiteScraperTest {
             )
         })
 
-        assertEquals(listOf(), scraper.scrapeDepthFirst(Domain("fake.com")).toList())
+        assertEquals(listOf(), scraper.scrape(Domain("fake.com")).toList())
     }
 
     @Test
@@ -27,7 +27,7 @@ class WebsiteScraperTest {
 
         assertEquals(
             listOf("foo", "bar").sorted(),
-            scraper.scrapeDepthFirst(Domain("john.doe")).toList().sorted()
+            scraper.scrape(Domain("john.doe")).toList().sorted()
         )
     }
 
@@ -46,7 +46,7 @@ class WebsiteScraperTest {
 
         assertEquals(
             listOf("foo", "bar").sorted(),
-            scraper.scrapeDepthFirst(Domain("john.doe")).toList().sorted()
+            scraper.scrape(Domain("john.doe")).toList().sorted()
         )
     }
 
@@ -69,7 +69,7 @@ class WebsiteScraperTest {
 
         assertEquals(
             listOf("foo", "bar", "how are you so", "extremely kewl", "lol", "lel").sorted(),
-            scraper.scrapeDepthFirst(Domain("john.doe")).toList().sorted()
+            scraper.scrape(Domain("john.doe")).toList().sorted()
         )
     }
 
@@ -88,7 +88,7 @@ class WebsiteScraperTest {
 
         assertEquals(
             listOf("foo", "bar", "baz").sorted(),
-            scraper.scrapeDepthFirst(Domain("john.doe")).toList().sorted()
+            scraper.scrape(Domain("john.doe")).toList().sorted()
         )
     }
 }

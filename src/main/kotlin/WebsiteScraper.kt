@@ -5,7 +5,7 @@ class WebsiteScraper(private val websiteFactory: WebsiteRepository) {
         val visitedUris = mutableSetOf<URI>()
     }
 
-    fun scrapeDepthFirst(domain: Domain) = scrapeDepthFirst(domain.toUri(), ScrapingContext(domain))
+    fun scrape(domain: Domain) = scrapeDepthFirst(domain.toUri(), ScrapingContext(domain))
 
     private fun scrapeDepthFirst(uri: URI, context: ScrapingContext): Sequence<String> = sequence {
         if (uri in context.visitedUris)
